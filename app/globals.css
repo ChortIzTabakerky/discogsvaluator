@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f4f4f6;
+  --foreground: #333333;
+  --card-bg: #ffffff;
+  --card-border: #e0e0e0;
+  --discogs-blue: #0275d8;
+  --discogs-blue-tint: #eaf3fc;
+}
+
+.dark {
+  --background: #121212;
+  --foreground: #f0f0f0;
+  --card-bg: #222222;
+  --card-border: #333333;
+  --discogs-blue: #388bfd;
+  --discogs-blue-tint: #13233a;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Discogs Link Styling */
+a {
+  color: #0275d8;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.dark a {
+  color: #58a6ff;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #014c8c;
+}
+
+.dark a:hover {
+  color: #79c0ff;
+}
+
+/* Discogs Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #181818;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #444444;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+
+/* Discogs button utility */
+.btn-discogs-primary {
+  background-color: #0275d8;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.15s ease-in-out;
+}
+.btn-discogs-primary:hover {
+  background-color: #01549b;
+}
+
+.dark .btn-discogs-primary {
+  background-color: #1f6feb;
+}
+.dark .btn-discogs-primary:hover {
+  background-color: #388bfd;
+}
+
+.btn-discogs-dark {
+  background-color: #222222;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.15s ease-in-out;
+}
+.btn-discogs-dark:hover {
+  background-color: #383838;
+}
+
+.btn-discogs-default {
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #cccccc;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.15s ease-in-out;
+}
+.btn-discogs-default:hover {
+  background-color: #f5f5f5;
+  border-color: #adadad;
+}
+
+.dark .btn-discogs-default {
+  background-color: #282828;
+  color: #f0f0f0;
+  border-color: #404040;
+}
+.dark .btn-discogs-default:hover {
+  background-color: #333333;
+  border-color: #555555;
+}
